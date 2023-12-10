@@ -36,6 +36,8 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'pages.apps.PagesConfig',
+    'rest_framework',
+    'snippets',
 ]
 
 MIDDLEWARE = [
@@ -82,6 +84,12 @@ DATABASES = {
         'HOST': 'db',
         'PORT': 5432
     }
+}
+
+
+REST_FRAMEWORK = {
+    'DEFAULT_PAGINATION_CLASS': 'rest_framework.pagination.PageNumberPagination',
+    'PAGE_SIZE': 10
 }
 
 # Password validation
